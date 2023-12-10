@@ -6,7 +6,7 @@ const getForecast = async (req, res) => {
     const lat = req.query.lat;
     const lon = req.query.lon;
 
-    const url = `${host}?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.API_KEY}`;
+    const url = `${host}?lat=${lat}&lon=${lon}&units=imperial&appid=${process.env.API_KEY}`;
 
     try {
         
