@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-    username: {
+const dataSchema = new Schema({
+    location: {
         type: String,
         required: true,
     },
-    email: {
+    lat: {
         type: String,
         required: true,
     },
-    password: {
+    lon: {
         type: String,
         required: true,
     },
@@ -20,7 +20,7 @@ const userSchema = new Schema({
     },
 });
 
-User = mongoose.model('User', userSchema);
+Data = mongoose.model('Data', dataSchema);
 module.exports = {
-    User,
+    Data,
 }

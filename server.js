@@ -5,7 +5,6 @@ const app = express();
 const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const connectDB = require('./config/dbConn');
-const verifyToken = require('./middleware/verifyToken');
 
 const PORT = process.env.PORT || 5050;
 
@@ -22,15 +21,6 @@ app.use(express.json());
 
 // Weather API Routes
 app.use('/v1/weather', require('./routes/api/weatherRoutes'));
-
-// Auth Routes
-app.use('/v1/auth', require('./routes/api/authRoutes')); // Routes for user to register, login, and logout
-
-// Middleware to verify JWT, routes after this point are protected
-app.use(verifyToken);
-
-// Protected Routes
-app.use('/v1/user', require('./routes/api/userRoutes'));
 
 mongoose.connection.once('open', () => {
     console.log('MongoDB connected!');
