@@ -37,7 +37,9 @@ Link to the frontend is [here](https://github.com/Voltorik/solus)
 - Gets all users in the database 
   **No arguments required:**
     
+
 ## Tech Stack
-- Built with [Node.js](https://nodejs.org/en), [Express](https://expressjs.com/), and [Mongoose](https://mongoosejs.com/).
+- Frontend is built with [Angular](https://angular.io/) and [Bootstrap](https://getbootstrap.com).
+- Backend is built with [Node.js](https://nodejs.org/en), [Express](https://expressjs.com/), and [Mongoose](https://mongoosejs.com/).
 - Database used: [MongoDB](https://www.mongodb.com/).
 - Weather data is taken from [OpenWeatherMap](https://openweathermap.org/forecast5)
